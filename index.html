@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunandan Singh | Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Sunandan Singh, Computer Science Engineer and Full Stack Developer.">
+    <!-- Using Inter to mimic Apple's San Francisco -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav aria-label="Main Navigation">
+        <div class="nav-content">
+            <a href="index.html#personal-info" class="logo">Sunandan.</a>
+            <ul class="nav-links">
+                <li><a href="#about" class="active">about</a></li>
+                <li><a href="skills.html">skills</a></li>
+                <li><a href="projects.html">portfolio</a></li>
+                <li><a href="education.html">education</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+            <div class="social-links-nav">
+                <a href="https://github.com/Sunandanthakur" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/Sunandansingh" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:SunandanSingh0001@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+<section id="about" class="hero fade-in-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p class="pre-heading">FULL STACK DEVELOPER & UI DESIGNER</p>
+                    <h1 class="typing-text">build.</h1>
+                    <p class="hero-subtitle">A few ways I can help you engineer and scale modern applications.</p>
+                    <p class="hero-desc">With experience in full-stack development, AI integrations, and responsive design, I'm eager to build intuitive and robust experiences. Currently pursuing B.Tech in CSE at LPU with a deep passion for problem-solving.</p>
+                    <div class="hero-actions">
+                        <a href="projects.html" class="btn btn-primary">View Portfolio</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-card-mockup">
+                        <div class="mockup-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="mockup-body">
+                            <h2>Full Stack Architecture</h2>
+                            <p>Crafting scalable backend systems and beautiful frontend UIs.</p>
+                            <div class="mockup-code">
+                                <code>const engineer = "Sunandan";</code>
+                                <code>engineer.build();</code>
+                                <code><span style="color: grey;">// executing vision</span></code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<section id="contact" class="contact fade-in-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                    <p>Have a question or want to work together?</p>
+                </div>
+                
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <div class="info-block">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Pathankot, Punjab</p>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>SunandanSingh0001@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91-7508922005</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-box">
+                        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="apple-form">
+                            <input type="hidden" name="access_key" value="5654fa5e-51d5-4963-b60a-291aab435e89">
+                            <div class="form-row">
+                                <div class="input-col">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                                </div>
+                                <div class="input-col">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+                            <div id="form-message" class="form-success">Message sent successfully!</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+</main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="index.html#personal-info" class="logo">Sunandan.</a>
+            <div class="footer-links">
+                <a href="https://github.com/Sunandanthakur"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/Sunandansingh"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sunandan Singh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="personal-info-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="section-header" style="margin-bottom: 20px; text-align: left;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 5px;">Personal Info</h2>
+                <p>Background & Extracurriculars</p>
+            </div>
+            
+            <h3 style="font-size: 1.3rem; margin-bottom: 15px;">Hi, I'm Sunandan!</h3>
+            <p style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 25px; line-height: 1.6;">
+                Originally from <strong>Pathankot, Punjab</strong>, I have a deep passion for coding and building impactful software solutions. Beyond development, I enjoy engaging with my community and continuous self-improvement.
+            </p>
+            
+            <div class="info-block" style="gap: 15px; margin-bottom: 20px;">
+                <i class="fas fa-comments" style="font-size: 1.1rem;"></i>
+                <div>
+                    <h4 style="font-size: 1rem;">Communication</h4>
+                    <p style="font-size: 0.9rem;">Completed a 3-month Spoken English course to enhance communication.</p>
+                </div>
+            </div>
+            
+            <div class="info-block" style="gap: 15px; margin-bottom: 20px;">
+                <i class="fas fa-hands-helping" style="font-size: 1.1rem;"></i>
+                <div>
+                    <h4 style="font-size: 1rem;">NGO Volunteering</h4>
+                    <p style="font-size: 0.9rem;">Actively worked in an NGO, contributing to social welfare initiatives.</p>
+                </div>
+            </div>
+
+            <div class="info-block" style="gap: 15px; margin-bottom: 20px;">
+                <i class="fas fa-language" style="font-size: 1.1rem;"></i>
+                <div>
+                    <h4 style="font-size: 1rem;">Languages</h4>
+                    <p style="font-size: 0.9rem;">I am fluent in 3 languages: <strong>Hindi, Punjabi, and English</strong>.</p>
+                </div>
+            </div>
+            
+            <div class="info-block" style="gap: 15px; margin-bottom: 0;">
+                <i class="fas fa-seedling" style="font-size: 1.1rem;"></i>
+                <div>
+                    <h4 style="font-size: 1rem;">Roots</h4>
+                    <p style="font-size: 0.9rem;">My village is <strong>Bungal</strong>.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <img src="assets/bungal.jpg" alt="Village Bungal" style="width: 100%; border-radius: 12px; max-height: 200px; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
