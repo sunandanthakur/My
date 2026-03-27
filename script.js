@@ -2,6 +2,85 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Split Hero Interaction (Opening Join Animation + Interactive Split)
+    const splitHero = document.querySelector('.split-hero');
+    const btfBase = document.querySelector('.btf-base');
+    const btfTopImg = document.getElementById('btf-top-img');
+
+    if (splitHero && btfBase && btfTopImg) {
+        let isOpening = true;
+
+        // Initial setup for animation
+        btfBase.classList.add('preparing');
+        btfTopImg.classList.add('preparing');
+
+        // Start join animation after a short delay
+        setTimeout(() => {
+            btfBase.classList.remove('preparing');
+            btfTopImg.classList.remove('preparing');
+            btfBase.classList.add('joined');
+            btfTopImg.classList.add('joined');
+        }, 100);
+
+        // Enable interaction after animation finishes
+        setTimeout(() => {
+            isOpening = false;
+            // Remove transition from top image clip-path for instant mouse response
+            btfTopImg.style.transition = 'transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.2s ease';
+        }, 1400);
+
+        splitHero.addEventListener('mousemove', (e) => {
+            if (isOpening) return;
+
+            const x = e.clientX;
+            const btfContainer = btfTopImg.parentElement;
+            const rect = btfContainer.getBoundingClientRect();
+            
+            let clipX = x - rect.left;
+            
+            if (clipX < 0) clipX = 0;
+            if (clipX > rect.width) clipX = rect.width;
+
+            // Get text elements for fading
+            const textDesigner = document.getElementById('text-designer');
+            const textCoder = document.getElementById('text-coder');
+
+            // Normal butterfly (btf-top) reveals from 0 to clipX (Left side)
+            btfTopImg.style.clipPath = `polygon(0 0, ${clipX}px 0, ${clipX}px 100%, 0 100%)`;
+
+            // Slowly fade words based on split position
+            // Normalized position (0 to 1)
+            const p = clipX / rect.width;
+            
+            // If we move to the Left (Designer side), Coder should disappear.
+            // When p = 0.5 (center), Coder opacity = 1. When p = 0.25 (on Designer word), Coder opacity = 0.
+            let coderOpacity = (p - 0.25) / 0.25;
+            if (coderOpacity < 0) coderOpacity = 0;
+            if (coderOpacity > 1) coderOpacity = 1;
+
+            // If we move to the Right (Coder side), Designer should disappear.
+            // When p = 0.5 (center), Designer opacity = 1. When p = 0.75 (on Coder word), Designer opacity = 0.
+            let designerOpacity = (0.75 - p) / 0.25;
+            if (designerOpacity < 0) designerOpacity = 0;
+            if (designerOpacity > 1) designerOpacity = 1;
+
+            if (textDesigner) textDesigner.style.opacity = designerOpacity;
+            if (textCoder) textCoder.style.opacity = coderOpacity;
+        });
+
+        // Reset to center on leaving the hero
+        splitHero.addEventListener('mouseleave', () => {
+            if (isOpening) return;
+            btfTopImg.classList.add('joined');
+            btfTopImg.style.clipPath = ''; // Respect the 'joined' class clip-path
+            
+            const textDesigner = document.getElementById('text-designer');
+            const textCoder = document.getElementById('text-coder');
+            if (textDesigner) textDesigner.style.opacity = 1;
+            if (textCoder) textCoder.style.opacity = 1;
+        });
+    }
+
     // Mobile Menu
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -71,81 +150,76 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Typing Effect for Hero Section
-    const typeWords = ['build.', 'design.', 'innovate.', 'scale.'];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    const typingTextElement = document.querySelector('.typing-text');
-    
-    function typeEffect() {
-        if (!typingTextElement) return;
-        
-        const currentWord = typeWords[wordIndex];
-        
-        if (isDeleting) {
-            typingTextElement.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typingTextElement.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-        }
-        
-        let typeSpeed = isDeleting ? 100 : 200;
-        
-        if (!isDeleting && charIndex === currentWord.length) {
-            typeSpeed = 2000; // Pause at end of word
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % typeWords.length;
-            typeSpeed = 500; // Pause before typing next word
-        }
-        
-        setTimeout(typeEffect, typeSpeed);
-    }
-    
-    if (typingTextElement) {
-        // Init typing effect
-        setTimeout(typeEffect, 1000);
-    }
-
-    // Modal logic
+    // Personal info modal
     const modal = document.getElementById('personal-info-modal');
     const closeBtn = document.querySelector('.close-modal');
-    
-    // Check if the URL has the hash on load to open the modal
-    if (window.location.hash === '#personal-info' && modal) {
+    const aboutLinks = document.querySelectorAll('a[href="#personal-info"]');
+    const isIndexPage = window.location.pathname.endsWith('index.html')
+        || window.location.pathname === '/'
+        || window.location.pathname.endsWith('/portfolio/');
+
+    const openModal = () => {
+        if (!modal) return;
         modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        history.replaceState(null, '', '#personal-info');
+    };
+
+    const closeModal = () => {
+        if (!modal) return;
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+    };
+
+    if (isIndexPage && window.location.hash === '#personal-info') {
+        openModal();
     }
-    
-    // Add click listeners to logos
-    document.querySelectorAll('.logo').forEach(logo => {
-        logo.addEventListener('click', (e) => {
-            // Only modal behavior on index.html
-            const path = window.location.pathname;
-            if (path.endsWith('index.html') || path === '/' || path.endsWith('/')) {
-                e.preventDefault();
-                if(modal) modal.classList.add('active');
-                history.pushState(null, null, '#personal-info');
-            }
+
+    aboutLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            if (!isIndexPage) return;
+            e.preventDefault();
+            openModal();
         });
     });
 
     if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            modal.classList.remove('active');
-            history.pushState(null, null, window.location.pathname + window.location.search);
-        });
+        closeBtn.addEventListener('click', closeModal);
     }
 
     if (modal) {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.classList.remove('active');
-                history.pushState(null, null, window.location.pathname + window.location.search);
+                closeModal();
             }
         });
     }
 
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Interactive hover cards for education page
+    document.querySelectorAll('.cert-item, .timeline-node, .achievement-box').forEach((card) => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const rotateY = ((x / rect.width) - 0.5) * 6;
+            const rotateX = (0.5 - (y / rect.height)) * 5;
+
+            card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+            card.style.setProperty('--spot-x', `${x}px`);
+            card.style.setProperty('--spot-y', `${y}px`);
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+            card.style.removeProperty('--spot-x');
+            card.style.removeProperty('--spot-y');
+        });
+    });
 });

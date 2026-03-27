@@ -13,9 +13,9 @@
 <body>
     <nav aria-label="Main Navigation">
         <div class="nav-content">
-            <a href="index.html#personal-info" class="logo">Sunandan.</a>
+            <a href="index.html" class="logo">Sunandan.</a>
             <ul class="nav-links">
-                <li><a href="#about" class="active">about</a></li>
+                <li><a href="#personal-info" class="active">about</a></li>
                 <li><a href="skills.html">skills</a></li>
                 <li><a href="projects.html">portfolio</a></li>
                 <li><a href="education.html">education</a></li>
@@ -34,40 +34,29 @@
 
     <main>
 
-<section id="about" class="hero fade-in-section">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <p class="pre-heading">FULL STACK DEVELOPER & UI DESIGNER</p>
-                    <h1 class="typing-text">build.</h1>
-                    <p class="hero-subtitle">A few ways I can help you engineer and scale modern applications.</p>
-                    <p class="hero-desc">With experience in full-stack development, AI integrations, and responsive design, I'm eager to build intuitive and robust experiences. Currently pursuing B.Tech in CSE at LPU with a deep passion for problem-solving.</p>
-                    <div class="hero-actions">
-                        <a href="projects.html" class="btn btn-primary">View Portfolio</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        <section id="about" class="split-hero">
+            <!-- Static Text Layers -->
+            <div class="hero-text-container">
+                <div class="hero-text-left" id="text-designer">
+                    <div class="side-content">
+                        <h1>designer</h1>
+                        <p>I build beautiful, intuitive interfaces that delight users and elevate brands.</p>
                     </div>
                 </div>
-                
-                <div class="hero-visual">
-                    <div class="hero-card-mockup">
-                        <div class="mockup-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <div class="mockup-body">
-                            <h2>Full Stack Architecture</h2>
-                            <p>Crafting scalable backend systems and beautiful frontend UIs.</p>
-                            <div class="mockup-code">
-                                <code>const engineer = "Sunandan";</code>
-                                <code>engineer.build();</code>
-                                <code><span style="color: grey;">// executing vision</span></code>
-                            </div>
-                        </div>
+                <div class="hero-text-right" id="text-coder">
+                    <div class="side-content">
+                        <h1>&lt;coder&gt;</h1>
+                        <p>I write clean, efficient, and scalable code to bring complex visions to life.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
+            <!-- Single Butterfly Container in the center -->
+            <div class="butterfly-container">
+                <img src="assets/butterfly_painted.png" alt="Painted Blue Butterfly" class="btf-img btf-base">
+                <img src="assets/butterfly_normal.png" alt="Normal Blue Butterfly" class="btf-img btf-top" id="btf-top-img">
+            </div>
+        </section>
 
 <section id="contact" class="contact fade-in-section">
             <div class="section-container">
@@ -141,52 +130,144 @@
     </footer>
 
     <div id="personal-info-modal" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="section-header" style="margin-bottom: 20px; text-align: left;">
-                <h2 style="font-size: 1.8rem; margin-bottom: 5px;">Personal Info</h2>
-                <p>Background & Extracurriculars</p>
-            </div>
-            
-            <h3 style="font-size: 1.3rem; margin-bottom: 15px;">Hi, I'm Sunandan!</h3>
-            <p style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 25px; line-height: 1.6;">
-                Originally from <strong>Pathankot, Punjab</strong>, I have a deep passion for coding and building impactful software solutions. Beyond development, I enjoy engaging with my community and continuous self-improvement.
-            </p>
-            
-            <div class="info-block" style="gap: 15px; margin-bottom: 20px;">
-                <i class="fas fa-comments" style="font-size: 1.1rem;"></i>
-                <div>
-                    <h4 style="font-size: 1rem;">Communication</h4>
-                    <p style="font-size: 0.9rem;">Completed a 3-month Spoken English course to enhance communication.</p>
+        <div class="modal-content personal-modal-content">
+            <button type="button" class="close-modal" aria-label="Close personal info">&times;</button>
+            <div id="personal-info" class="personal-info-section">
+                <div class="about-top">
+                    <div class="about-copy">
+                        <p class="eyebrow">About Me</p>
+                        <h2>Who I Am Beyond The Code</h2>
+                        <p class="about-lead">
+                            I am Sunandan Singh, a Computer Science Engineer from Pathankot, Punjab. I love building clean,
+                            meaningful digital experiences and pushing myself to grow through discipline, curiosity, and consistency.
+                        </p>
+                    </div>
+                    <div class="about-mini-grid">
+                        <div class="mini-stat">
+                            <span>Based In</span>
+                            <strong>Punjab</strong>
+                        </div>
+                        <div class="mini-stat">
+                            <span>Languages</span>
+                            <strong>3 Fluent</strong>
+                        </div>
+                        <div class="mini-stat">
+                            <span>Focus</span>
+                            <strong>Full Stack</strong>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="info-block" style="gap: 15px; margin-bottom: 20px;">
-                <i class="fas fa-hands-helping" style="font-size: 1.1rem;"></i>
-                <div>
-                    <h4 style="font-size: 1rem;">NGO Volunteering</h4>
-                    <p style="font-size: 0.9rem;">Actively worked in an NGO, contributing to social welfare initiatives.</p>
-                </div>
-            </div>
 
-            <div class="info-block" style="gap: 15px; margin-bottom: 20px;">
-                <i class="fas fa-language" style="font-size: 1.1rem;"></i>
-                <div>
-                    <h4 style="font-size: 1rem;">Languages</h4>
-                    <p style="font-size: 0.9rem;">I am fluent in 3 languages: <strong>Hindi, Punjabi, and English</strong>.</p>
+                <div class="personal-layout">
+                    <div class="warrior-stage">
+                        <div class="warrior-frame">
+                            <img src="assets/warrior.png" alt="Warrior illustration" class="warrior-image">
+                        </div>
+                    </div>
+
+                    <div class="facts-panel">
+                        <div class="facts-header">
+                            <h3>Random facts</h3>
+                            <p>Small things that say a lot about me.</p>
+                        </div>
+                        <div class="facts-list">
+                            <div class="fact-item">I enjoy turning ideas into polished interfaces.</div>
+                            <div class="fact-item">I like projects that mix design sense with technical depth.</div>
+                            <div class="fact-item">I completed a Spoken English course to communicate better.</div>
+                            <div class="fact-item">I am fluent in Hindi, Punjabi, and English.</div>
+                            <div class="fact-item">I worked with an NGO and value meaningful contribution.</div>
+                            <div class="fact-item">My roots are in Bungal village.</div>
+                            <div class="fact-item">My work style is calm, focused, and solution-driven.</div>
+                        </div>
+                        <div class="silly-graph">
+                            <div class="silly-graph-head">
+                                <h4>Silly graph</h4>
+                                <span>Totally scientific</span>
+                            </div>
+                            <div class="silly-chart">
+                                <div class="silly-axis">
+                                    <span>Sleepy</span>
+                                    <span>Okay</span>
+                                    <span>Focused</span>
+                                    <span>Locked In</span>
+                                </div>
+                                <div class="silly-bars">
+                                    <div class="silly-col">
+                                        <div class="silly-bar mint" style="height: 54%;">
+                                            <strong>54</strong>
+                                            <span>Coffee</span>
+                                        </div>
+                                    </div>
+                                    <div class="silly-col">
+                                        <div class="silly-bar peach" style="height: 88%;">
+                                            <strong>88</strong>
+                                            <span>Ideas</span>
+                                        </div>
+                                    </div>
+                                    <div class="silly-col">
+                                        <div class="silly-bar lemon" style="height: 96%;">
+                                            <strong>96</strong>
+                                            <span>Curiosity</span>
+                                        </div>
+                                    </div>
+                                    <div class="silly-col">
+                                        <div class="silly-bar coral" style="height: 73%;">
+                                            <strong>73</strong>
+                                            <span>Chaos</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="info-block" style="gap: 15px; margin-bottom: 0;">
-                <i class="fas fa-seedling" style="font-size: 1.1rem;"></i>
-                <div>
-                    <h4 style="font-size: 1rem;">Roots</h4>
-                    <p style="font-size: 0.9rem;">My village is <strong>Bungal</strong>.</p>
+
+                <div class="skills-showcase">
+                    <div class="skills-headline">
+                        <p class="eyebrow">About Skills</p>
+                        <h3>My Skills</h3>
+                    </div>
+                    <div class="chart-grid">
+                        <div class="chart-y-axis">
+                            <span>Elite</span>
+                            <span>Advanced</span>
+                            <span>Strong</span>
+                            <span>Growing</span>
+                        </div>
+                        <div class="chart-bars">
+                            <div class="chart-column">
+                                <div class="chart-bar teal" style="height: 95%;">
+                                    <strong>95%</strong>
+                                    <span>Problem Solving</span>
+                                </div>
+                            </div>
+                            <div class="chart-column">
+                                <div class="chart-bar blush" style="height: 90%;">
+                                    <strong>90%</strong>
+                                    <span>Communication</span>
+                                </div>
+                            </div>
+                            <div class="chart-column">
+                                <div class="chart-bar gold" style="height: 95%;">
+                                    <strong>95%</strong>
+                                    <span>Full Stack</span>
+                                </div>
+                            </div>
+                            <div class="chart-column">
+                                <div class="chart-bar sand" style="height: 75%;">
+                                    <strong>75%</strong>
+                                    <span>Leadership</span>
+                                </div>
+                            </div>
+                            <div class="chart-column">
+                                <div class="chart-bar red" style="height: 40%;">
+                                    <strong>40%</strong>
+                                    <span>Overthinking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div style="margin-top: 30px; text-align: center;">
-                <img src="assets/farmer.jpg" alt="Village Roots" style="width: 100%; border-radius: 12px; max-height: 250px; object-fit: contain;">
             </div>
         </div>
     </div>
