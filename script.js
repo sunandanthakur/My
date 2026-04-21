@@ -84,10 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
+    const navContent = document.querySelector('.nav-content');
 
     if(hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active') ? 'true' : 'false');
+            if (navContent) {
+                navContent.classList.toggle('menu-open', navLinks.classList.contains('active'));
+            }
             const icon = hamburger.querySelector('i');
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -101,11 +106,65 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.nav-links li a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                if (navContent) {
+                    navContent.classList.remove('menu-open');
+                }
                 if (hamburger.querySelector('i')) {
                     hamburger.querySelector('i').classList.add('fa-bars');
                     hamburger.querySelector('i').classList.remove('fa-times');
                 }
             });
+        });
+    }
+
+    // Contact form with inline success/error feedback
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+
+    if (contactForm && formMessage) {
+        contactForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const submitButton = contactForm.querySelector('.submit-btn');
+            const originalLabel = submitButton ? submitButton.textContent : '';
+            const formData = new FormData(contactForm);
+
+            formMessage.classList.remove('is-visible', 'is-error');
+            formMessage.textContent = '';
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+            }
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        Accept: 'application/json'
+                    }
+                });
+
+                const result = await response.json();
+
+                if (!response.ok || !result.success) {
+                    throw new Error(result.message || 'Unable to send your message right now.');
+                }
+
+                contactForm.reset();
+                formMessage.textContent = 'Thanks, your message has been sent successfully.';
+                formMessage.classList.add('is-visible');
+            } catch (error) {
+                formMessage.textContent = error.message || 'Something went wrong. Please try again later.';
+                formMessage.classList.add('is-visible', 'is-error');
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalLabel;
+                }
+            }
         });
     }
 

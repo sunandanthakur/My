@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunandan Singh | Full Stack Developer</title>
-    <meta name="description" content="Portfolio of Sunandan Singh, Computer Science Engineer and Full Stack Developer.">
-    <!-- Using Inter to mimic Apple's San Francisco -->
+    <title>Projects | Sunandan Singh Portfolio</title>
+    <meta name="description" content="See featured full stack, frontend, AI, and product projects built by Sunandan Singh.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#111111">
+    <link rel="canonical" href="https://sunandansingh.in/projects.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects | Sunandan Singh Portfolio">
+    <meta property="og:description" content="Featured projects built by Sunandan Singh across web apps, AI tools, and product experiences.">
+    <meta property="og:url" content="https://sunandansingh.in/projects.html">
+    <meta property="og:image" content="https://sunandansingh.in/assets/elite_travel.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Sunandan Singh Portfolio">
+    <meta name="twitter:description" content="Featured projects across web development, AI tools, and product experiences.">
+    <meta name="twitter:image" content="https://sunandansingh.in/assets/elite_travel.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <nav aria-label="Main Navigation">
         <div class="nav-content">
             <a href="index.html#personal-info" class="logo">Sunandan.</a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="index.html" >about</a></li>
                 <li><a href="skills.html">skills</a></li>
                 <li><a href="projects.html" class="active">portfolio</a></li>
@@ -22,17 +37,17 @@
                 <li><a href="index.html#contact">contact</a></li>
             </ul>
             <div class="social-links-nav">
-                <a href="https://github.com/Sunandanthakur" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/Sunandansingh" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Sunandanthakur" target="_blank" rel="noreferrer noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/Sunandansingh" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 <a href="mailto:SunandanSingh0001@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <main>
+    <main id="main-content">
 
 <section id="projects" class="projects fade-in-section">
             <div class="section-container">
@@ -42,8 +57,8 @@
                 </div>
                 <div class="project-grid">
                     <!-- Project 1 -->
-                    <a href="https://github.com/sunandanthakur/EliteTravelChateau" target="_blank" class="apple-card">
-                        <div class="card-image"><img src="assets/elite_travel.png" alt="Travel Project"></div>
+                    <a href="https://github.com/sunandanthakur/EliteTravelChateau" target="_blank" rel="noreferrer noopener" class="apple-card">
+                        <div class="card-image"><img src="assets/elite_travel.png" alt="Elite Travel Chateau project preview" loading="lazy" decoding="async"></div>
                         <div class="card-content">
                             <h3>Elite Travel Chateau</h3>
                             <p class="date">Travel Booking Platform</p>
@@ -54,8 +69,8 @@
                         </div>
                     </a>
                     <!-- Project 2 -->
-                    <a href="https://github.com/sunandanthakur/NEXUS-SPACE" target="_blank" class="apple-card">
-                        <div class="card-image"><img src="assets/nexus_space.png" alt="Space Project"></div>
+                    <a href="https://github.com/sunandanthakur/NEXUS-SPACE" target="_blank" rel="noreferrer noopener" class="apple-card">
+                        <div class="card-image"><img src="assets/nexus_space.png" alt="NEXUS-SPACE project preview" loading="lazy" decoding="async"></div>
                         <div class="card-content">
                             <h3>NEXUS-SPACE</h3>
                             <p class="date">Space Tech Explorer</p>
@@ -66,8 +81,8 @@
                         </div>
                     </a>
                     <!-- Project 3 -->
-                    <a href="https://github.com/sunandanthakur/Job-_Search_Assistant" target="_blank" class="apple-card">
-                        <div class="card-image"><img src="assets/job_assistant.png" alt="Job Search Project"></div>
+                    <a href="https://github.com/sunandanthakur/Job-_Search_Assistant" target="_blank" rel="noreferrer noopener" class="apple-card">
+                        <div class="card-image"><img src="assets/job_assistant.png" alt="Job Search Assistant project preview" loading="lazy" decoding="async"></div>
                         <div class="card-content">
                             <h3>Job Search Assistant</h3>
                             <p class="date">AI-Powered Advisor</p>
@@ -78,8 +93,8 @@
                         </div>
                     </a>
                     <!-- Project 4 -->
-                    <a href="https://github.com/sunandanthakur/Furniture-website" target="_blank" class="apple-card">
-                        <div class="card-image"><img src="assets/furniture.png" alt="Furniture Project"></div>
+                    <a href="https://github.com/sunandanthakur/Furniture-website" target="_blank" rel="noreferrer noopener" class="apple-card">
+                        <div class="card-image"><img src="assets/furniture.png" alt="Furniture Website project preview" loading="lazy" decoding="async"></div>
                         <div class="card-content">
                             <h3>Furniture Website</h3>
                             <p class="date">E-Commerce UI</p>
@@ -90,8 +105,8 @@
                         </div>
                     </a>
                     <!-- Project 5 -->
-                    <a href="https://github.com/sunandanthakur/Weather-Forecast" target="_blank" class="apple-card">
-                        <div class="card-image"><img src="assets/weather.jpg" alt="Weather Project"></div>
+                    <a href="https://github.com/sunandanthakur/Weather-Forecast" target="_blank" rel="noreferrer noopener" class="apple-card">
+                        <div class="card-image"><img src="assets/weather.jpg" alt="Weather Forecast project preview" loading="lazy" decoding="async"></div>
                         <div class="card-content">
                             <h3>Weather Forecast</h3>
                             <p class="date">Real-time Weather Engine</p>
@@ -102,8 +117,8 @@
                         </div>
                     </a>
                     <!-- Project 6 -->
-                    <a href="https://github.com/sunandanthakur/PasswordStrengthChecker" target="_blank" class="apple-card">
-                        <div class="card-image"><img src="assets/password.jpg" alt="Password Strength"></div>
+                    <a href="https://github.com/sunandanthakur/PasswordStrengthChecker" target="_blank" rel="noreferrer noopener" class="apple-card">
+                        <div class="card-image"><img src="assets/password.jpg" alt="Password Strength Checker project preview" loading="lazy" decoding="async"></div>
                         <div class="card-content">
                             <h3>Password Strength</h3>
                             <p class="date">Security Tool</p>
@@ -114,8 +129,8 @@
                         </div>
                     </a>
                     <!-- Project 7 -->
-                    <a href="https://github.com/sunandanthakur/Earth-Guardians" target="_blank" class="apple-card">
-                        <div class="card-image"><img src="assets/earth.jpg" alt="Earth Guardians Project"></div>
+                    <a href="https://github.com/sunandanthakur/Earth-Guardians" target="_blank" rel="noreferrer noopener" class="apple-card">
+                        <div class="card-image"><img src="assets/earth.jpg" alt="Earth Guardians project preview" loading="lazy" decoding="async"></div>
                         <div class="card-content">
                             <h3>Earth Guardians</h3>
                             <p class="date">Environmental Initiative</p>
@@ -134,8 +149,8 @@
         <div class="footer-content">
             <a href="index.html#personal-info" class="logo">Sunandan.</a>
             <div class="footer-links">
-                <a href="https://github.com/Sunandanthakur"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/Sunandansingh"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Sunandanthakur" target="_blank" rel="noreferrer noopener" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/Sunandansingh" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -143,6 +158,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

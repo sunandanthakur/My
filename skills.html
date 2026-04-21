@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunandan Singh | Full Stack Developer</title>
-    <meta name="description" content="Portfolio of Sunandan Singh, Computer Science Engineer and Full Stack Developer.">
-    <!-- Using Inter to mimic Apple's San Francisco -->
+    <title>Skills | Sunandan Singh Portfolio</title>
+    <meta name="description" content="Browse the technical skills, frameworks, tools, and UI design learning focus areas of Sunandan Singh.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#111111">
+    <link rel="canonical" href="https://sunandansingh.in/skills.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Skills | Sunandan Singh Portfolio">
+    <meta property="og:description" content="Technical skills, development stack, and UI design learning resources from Sunandan Singh.">
+    <meta property="og:url" content="https://sunandansingh.in/skills.html">
+    <meta property="og:image" content="https://sunandansingh.in/assets/resume.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Skills | Sunandan Singh Portfolio">
+    <meta name="twitter:description" content="Technical skills, frameworks, tools, and UI design learning focus areas.">
+    <meta name="twitter:image" content="https://sunandansingh.in/assets/resume.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <nav aria-label="Main Navigation">
         <div class="nav-content">
             <a href="index.html#personal-info" class="logo">Sunandan.</a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="index.html" >about</a></li>
                 <li><a href="skills.html" class="active">skills</a></li>
                 <li><a href="projects.html">portfolio</a></li>
@@ -22,17 +37,17 @@
                 <li><a href="index.html#contact">contact</a></li>
             </ul>
             <div class="social-links-nav">
-                <a href="https://github.com/Sunandanthakur" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/Sunandansingh" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Sunandanthakur" target="_blank" rel="noreferrer noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/Sunandansingh" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 <a href="mailto:SunandanSingh0001@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <main>
+    <main id="main-content">
 
         <section id="skills" class="skills fade-in-section bg-light">
             <div class="section-container">
@@ -179,8 +194,8 @@
         <div class="footer-content">
             <a href="index.html#personal-info" class="logo">Sunandan.</a>
             <div class="footer-links">
-                <a href="https://github.com/Sunandanthakur"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/Sunandansingh"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Sunandanthakur" target="_blank" rel="noreferrer noopener" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/Sunandansingh" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -188,6 +203,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

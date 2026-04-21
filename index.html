@@ -3,18 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunandan Singh | Full Stack Developer</title>
-    <meta name="description" content="Portfolio of Sunandan Singh, Computer Science Engineer and Full Stack Developer.">
-    <!-- Using Inter to mimic Apple's San Francisco -->
+    <title>Sunandan Singh | Full Stack Developer Portfolio</title>
+    <meta name="description" content="Explore the portfolio of Sunandan Singh, a full stack developer building clean web experiences, modern interfaces, and scalable applications.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#111111">
+    <link rel="canonical" href="https://sunandansingh.in/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sunandan Singh | Full Stack Developer Portfolio">
+    <meta property="og:description" content="Portfolio website of Sunandan Singh featuring full stack projects, skills, education, and contact details.">
+    <meta property="og:url" content="https://sunandansingh.in/">
+    <meta property="og:image" content="https://sunandansingh.in/assets/resume.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sunandan Singh | Full Stack Developer Portfolio">
+    <meta name="twitter:description" content="Full stack developer portfolio with projects, skills, education, and contact details.">
+    <meta name="twitter:image" content="https://sunandansingh.in/assets/resume.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Sunandan Singh",
+            "url": "https://sunandansingh.in/",
+            "jobTitle": "Full Stack Developer",
+            "email": "mailto:SunandanSingh0001@gmail.com",
+            "telephone": "+91-7508922005",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Pathankot",
+                "addressRegion": "Punjab",
+                "addressCountry": "IN"
+            },
+            "sameAs": [
+                "https://github.com/Sunandanthakur",
+                "https://linkedin.com/in/Sunandansingh"
+            ]
+        }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <nav aria-label="Main Navigation">
         <div class="nav-content">
             <a href="index.html" class="logo">Sunandan.</a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="#personal-info" class="active">about</a></li>
                 <li><a href="skills.html">skills</a></li>
                 <li><a href="projects.html">portfolio</a></li>
@@ -22,17 +58,17 @@
                 <li><a href="#contact">contact</a></li>
             </ul>
             <div class="social-links-nav">
-                <a href="https://github.com/Sunandanthakur" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/Sunandansingh" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Sunandanthakur" target="_blank" rel="noreferrer noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/Sunandansingh" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 <a href="mailto:SunandanSingh0001@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <main>
+    <main id="main-content">
 
         <section id="about" class="split-hero">
             <!-- Static Text Layers -->
@@ -53,22 +89,34 @@
 
             <!-- Single Butterfly Container in the center -->
             <div class="butterfly-container">
-                <img src="assets/butterfly_painted.png" alt="Painted Blue Butterfly" class="btf-img btf-base">
-                <img src="assets/butterfly_normal.png" alt="Normal Blue Butterfly" class="btf-img btf-top" id="btf-top-img">
+                <img src="assets/butterfly_painted.png" alt="Painted Blue Butterfly" class="btf-img btf-base" fetchpriority="high" decoding="async">
+                <img src="assets/butterfly_normal.png" alt="Normal Blue Butterfly" class="btf-img btf-top" id="btf-top-img" fetchpriority="high" decoding="async">
             </div>
         </section>
 
-        <section class="build-best-section fade-in-section" aria-label="Build the best">
+        <section class="build-best-section fade-in-section" aria-label="Built for teams">
             <div class="build-stage">
                 <div class="build-grid" aria-hidden="true"></div>
                 <h2>
-                    <span>Build</span>
-                    <span>the best</span>
+                    <span>Built</span>
+                    <span>for teams</span>
                 </h2>
-                <div class="cursor cursor-gold cursor-left" aria-hidden="true"></div>
-                <div class="cursor cursor-blue cursor-center" aria-hidden="true"></div>
-                <div class="cursor cursor-green cursor-right" aria-hidden="true"></div>
-                <div class="cursor cursor-pink cursor-far" aria-hidden="true"></div>
+                <div class="float-chip chip-ui-flow" aria-hidden="true">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>UI Flow</span>
+                </div>
+                <div class="float-chip chip-code-snippet" aria-hidden="true">
+                    <i class="fa-solid fa-code"></i>
+                    <span>const launch = true;</span>
+                </div>
+                <div class="float-chip chip-design-system" aria-hidden="true">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Design System</span>
+                </div>
+                <div class="float-chip chip-api-ready" aria-hidden="true">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>API Ready</span>
+                </div>
             </div>
         </section>
 
@@ -76,54 +124,91 @@
             <div class="section-container">
                 <div class="section-header">
                     <h2>Get In Touch</h2>
-                    <p>Have a question or want to work together?</p>
+                    <p>Open to freelance work, internships, and thoughtful collaborations.</p>
                 </div>
                 
                 <div class="contact-wrapper">
                     <div class="contact-info">
-                        <div class="info-block">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Pathankot, Punjab</p>
+                        <div class="contact-intro-card">
+                            <span class="contact-kicker">Let’s Work Together</span>
+                            <h3>Have a project, role, or idea in mind?</h3>
+                            <p>
+                                I’m always interested in building clean products, solving real problems,
+                                and collaborating with teams that care about thoughtful execution.
+                            </p>
+                            <div class="contact-status">
+                                <span class="status-dot" aria-hidden="true"></span>
+                                Available for new opportunities
                             </div>
                         </div>
-                        <div class="info-block">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>SunandanSingh0001@gmail.com</p>
+
+                        <div class="contact-info-grid">
+                            <a class="info-block" href="mailto:SunandanSingh0001@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span class="info-label">Email</span>
+                                    <h4>SunandanSingh0001@gmail.com</h4>
+                                    <p>Best for project inquiries and hiring conversations.</p>
+                                </div>
+                            </a>
+
+                            <a class="info-block" href="tel:+917508922005">
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <span class="info-label">Phone</span>
+                                    <h4>+91 75089 22005</h4>
+                                    <p>Available for direct discussion when needed.</p>
+                                </div>
+                            </a>
+
+                            <div class="info-block info-static">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span class="info-label">Location</span>
+                                    <h4>Pathankot, Punjab</h4>
+                                    <p>Based in India and open to remote opportunities.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="info-block">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+91-7508922005</p>
-                            </div>
+
+                            <a class="info-block" href="https://linkedin.com/in/Sunandansingh" target="_blank" rel="noreferrer">
+                                <i class="fab fa-linkedin-in"></i>
+                                <div>
+                                    <span class="info-label">LinkedIn</span>
+                                    <h4>Connect Professionally</h4>
+                                    <p>Reach out for networking, internships, or collaboration.</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     
                     <div class="contact-form-box">
-                        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="apple-form">
-                            <input type="hidden" name="access_key" value="5654fa5e-51d5-4963-b60a-291aab435e89">
-                            <div class="form-row">
-                                <div class="input-col">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" required placeholder="John Doe">
-                                </div>
-                                <div class="input-col">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" required placeholder="john@example.com">
-                                </div>
+                        <div class="form-shell">
+                            <div class="form-shell-head">
+                                <span class="form-eyebrow">Send a Message</span>
+                                <h3>Tell me a little about what you need.</h3>
+                                <p>I usually reply with next steps, availability, and how I can help.</p>
                             </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
-                            <div id="form-message" class="form-success">Message sent successfully!</div>
-                        </form>
+                            <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="apple-form">
+                                <input type="hidden" name="access_key" value="5654fa5e-51d5-4963-b60a-291aab435e89">
+                                <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" class="bot-field" aria-hidden="true">
+                                <div class="form-row">
+                                    <div class="input-col">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                                    </div>
+                                    <div class="input-col">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Project or Message</label>
+                                    <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project, role, timeline, or what you need help with."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+                                <div id="form-message" class="form-success" aria-live="polite"></div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,8 +219,8 @@
         <div class="footer-content">
             <a href="index.html#personal-info" class="logo">Sunandan.</a>
             <div class="footer-links">
-                <a href="https://github.com/Sunandanthakur"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/Sunandansingh"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Sunandanthakur" target="_blank" rel="noreferrer noopener" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/Sunandansingh" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -175,7 +260,7 @@
                 <div class="personal-layout">
                     <div class="warrior-stage">
                         <div class="warrior-frame">
-                            <img src="assets/warrior.png" alt="Warrior illustration" class="warrior-image">
+                            <img src="assets/warrior.png" alt="Warrior illustration" class="warrior-image" loading="lazy" decoding="async">
                         </div>
                     </div>
 
@@ -286,6 +371,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
