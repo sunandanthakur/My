@@ -1780,3 +1780,400 @@ a.cert-item {
     .ui-pill-list span,
     .ui-article-meta span { width: 100%; text-align: center; }
 }
+
+@media (max-width: 640px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-content {
+        height: 64px;
+        padding: 0 6%;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .hamburger {
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.35rem;
+        position: relative;
+    }
+
+    .hamburger i {
+        display: none;
+    }
+
+    .hamburger::before {
+        content: "\2630";
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        font-size: 1.45rem;
+        line-height: 1;
+    }
+
+    .nav-content:has(.nav-links.active) .hamburger::before {
+        content: "\00d7";
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        top: 64px;
+        padding: 18px 6% 22px;
+        gap: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 13px 0;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .split-hero {
+        min-height: 100svh;
+        height: auto;
+        padding: 92px 6% 48px;
+        overflow: visible;
+    }
+
+    .hero-text-container {
+        position: relative;
+        display: grid;
+        gap: 270px;
+        height: auto;
+        min-height: 650px;
+        pointer-events: auto;
+    }
+
+    .hero-text-left,
+    .hero-text-right {
+        position: static;
+        width: 100%;
+        height: auto;
+        opacity: 1 !important;
+    }
+
+    .side-content {
+        position: static;
+        transform: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .side-content h1 {
+        font-size: clamp(2.45rem, 14vw, 3.75rem);
+        line-height: 0.95;
+        margin-bottom: 14px;
+        letter-spacing: -0.04em;
+    }
+
+    .side-content p {
+        max-width: 320px;
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .butterfly-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: min(86vw, 360px);
+        transform: translate(-50%, -50%);
+    }
+
+    .section-container {
+        padding: 78px 6%;
+    }
+
+    .section-header {
+        margin-bottom: 34px;
+    }
+
+    .section-header h2 {
+        font-size: clamp(1.85rem, 8vw, 2.15rem);
+        line-height: 1.08;
+        overflow-wrap: break-word;
+        text-wrap: balance;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+        max-width: 32ch;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-wrap: break-word;
+    }
+
+    .skills-marquee {
+        padding: 34px 0;
+    }
+
+    .skills-marquee::before,
+    .skills-marquee::after {
+        width: 48px;
+    }
+
+    .marquee-content {
+        gap: 14px;
+        animation-duration: 32s;
+    }
+
+    .skill-item {
+        padding: 18px 22px;
+        border-radius: 16px;
+        gap: 10px;
+    }
+
+    .skill-item i {
+        font-size: 1.45rem;
+    }
+
+    .skill-item span {
+        font-size: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .apple-card,
+    .ui-skill-panel,
+    .ui-article-card,
+    .ui-article-board,
+    .contact-wrapper,
+    .highlight-pill,
+    .achievement-box,
+    .cert-item,
+    .personal-info-section,
+    .warrior-frame,
+    .silly-graph {
+        border-radius: 18px;
+    }
+
+    .card-image {
+        height: 190px;
+    }
+
+    .card-content {
+        padding: 22px;
+    }
+
+    .education-highlights {
+        gap: 14px;
+        margin-bottom: 30px;
+    }
+
+    .split-layout {
+        gap: 38px;
+    }
+
+    .timeline-clean {
+        padding-left: 16px;
+    }
+
+    .timeline-node {
+        padding-right: 0;
+    }
+
+    .achievement-box,
+    .cert-item {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .cert-icon {
+        width: 68px;
+        height: 54px;
+    }
+
+    .cert-details .date-link {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .contact-wrapper {
+        gap: 28px;
+        padding: 24px 18px;
+    }
+
+    .info-block {
+        gap: 14px;
+        margin-bottom: 22px;
+    }
+
+    .info-block p,
+    .cert-details p,
+    .card-content .desc {
+        overflow-wrap: anywhere;
+    }
+
+    .apple-form input,
+    .apple-form textarea {
+        font-size: 16px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .site-footer {
+        padding-top: 42px;
+    }
+
+    .modal-overlay {
+        align-items: flex-start;
+        padding: 12px 0;
+    }
+
+    .modal-content,
+    .personal-modal-content {
+        width: min(100% - 16px, 600px);
+        max-height: calc(100svh - 24px);
+        padding: 8px;
+    }
+
+    .close-modal {
+        top: 16px;
+        right: 16px;
+        z-index: 5;
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(29, 29, 31, 0.08);
+        border-radius: 50%;
+        background: rgba(255,255,255,0.88);
+    }
+
+    .personal-info-section {
+        padding: 54px 16px 18px;
+    }
+
+    .about-top {
+        gap: 20px;
+        padding-bottom: 22px;
+        margin-bottom: 24px;
+    }
+
+    .personal-layout {
+        gap: 28px;
+        padding-bottom: 26px;
+        margin-bottom: 28px;
+    }
+
+    .warrior-frame {
+        min-height: 300px;
+        max-width: 320px;
+    }
+
+    .facts-panel {
+        padding: 0;
+    }
+
+    .silly-chart {
+        grid-template-columns: 1fr;
+        min-height: 190px;
+    }
+
+    .silly-axis {
+        display: none;
+    }
+
+    .silly-bars {
+        min-height: 190px;
+        gap: 8px;
+    }
+
+    .silly-bar {
+        padding: 12px 5px 8px;
+    }
+
+    .silly-bar strong {
+        font-size: 1.2rem;
+    }
+
+    .silly-bar span {
+        font-size: 0.68rem;
+        overflow-wrap: anywhere;
+    }
+
+    .skills-headline {
+        display: block;
+    }
+
+    .chart-grid {
+        min-height: 310px;
+    }
+
+    .chart-bars {
+        min-height: 310px;
+        gap: 7px;
+    }
+
+    .chart-bar {
+        padding: 12px 5px 10px;
+        min-width: 0;
+    }
+
+    .chart-bar strong {
+        font-size: 1.05rem;
+    }
+
+    .chart-bar span {
+        font-size: 0.62rem;
+        overflow-wrap: anywhere;
+    }
+
+}
+
+@media (max-width: 380px) {
+    .section-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .split-hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-text-container {
+        gap: 235px;
+        min-height: 600px;
+    }
+
+    .butterfly-container {
+        width: min(90vw, 310px);
+    }
+
+    .card-image {
+        height: 170px;
+    }
+
+    .cert-item {
+        align-items: flex-start;
+    }
+
+    .cert-icon {
+        width: 58px;
+        height: 48px;
+    }
+
+    .chart-bars,
+    .silly-bars {
+        gap: 5px;
+    }
+}
